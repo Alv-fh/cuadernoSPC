@@ -1,0 +1,186 @@
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+}
+
+body {
+    margin: 0;
+    background-image: url('images/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#comidas p,
+#descripciones p,
+#acciones p,
+#personas p,
+#lugares p,
+#respuestas p,
+#objetos p {
+    animation: fluido 10s ease-in-out infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    margin: 0;
+}
+
+#comidas,
+#descripciones,
+#acciones,
+#personas,
+#lugares,
+#respuestas,
+#objetos {
+    width: 40%;
+    text-align: center;
+    margin: 5% 30%; 
+    border-radius: 15px;
+    overflow: hidden;
+}
+#comidas {
+    background-color: rgb(250, 100, 250);
+}
+#descripciones {
+    background-color: rgb(210, 245, 11);
+}
+
+#acciones {
+    background-color: rgb(11, 245, 233);
+}
+
+#personas {
+    background-color: rgb(11, 245, 62);
+}
+
+#lugares {
+    background-color: rgb(245, 11, 11);
+}
+
+#respuestas {
+    background-color: rgb(245, 124, 11);
+}
+
+#objetos {
+    background-color: rgb(46, 11, 245);
+}
+
+/* Actualizamos los estilos en tu archivo styles.css */
+#barravacia{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Color blanco de fondo */
+    border-top-left-radius: 15px; /* Bordes redondos en la esquina superior izquierda */
+    border-top-right-radius: 15px; /* Bordes redondos en la esquina superior derecha */
+    border: 3px solid #cccccc; /* Grosor y color del borde */
+    box-sizing: border-box; /* Incluye el grosor del borde en el tamaño total del elemento */
+    text-align: center; /* Centrar el texto */
+}   
+#barraBlancaContainer {
+    height: 34%;  /* Ajusta el valor según sea necesario */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #cccccc;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+#imagenSeleccionadaContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Color blanco de fondo */
+    border-top-left-radius: 15px; /* Bordes redondos en la esquina superior izquierda */
+    border-top-right-radius: 15px; /* Bordes redondos en la esquina superior derecha */
+    border: 3px solid #cccccc; /* Grosor y color del borde */
+    box-sizing: border-box; /* Incluye el grosor del borde en el tamaño total del elemento */
+    text-align: center; /* Centrar el texto */
+}
+#imagenSeleccionadaContainer img {
+    border-style: solid;
+    border-width: 5px; /* Ajusta el grosor del borde según sea necesario */
+    margin: 4%; /* Ajusta el espacio entre las imágenes según sea necesario */
+    height: 7%;
+    width: 7%;
+    float: left;
+}
+
+/* Nuevo estilo para el título "Pictogramas" encima del cuadro blanco */
+#tituloPictogramas {
+    bottom: 15px; /* Ajusta el valor según sea necesario */
+    margin-bottom: 4%;
+    left: 15px; /* Ajusta el valor según sea necesario */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    position: fixed;
+}
+
+#menuDesplegable {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #cccccc;
+    box-sizing: border-box;
+    text-align: center;
+    animation: aparecerDesdeAbajo 0.5s ease-out; /* Animación para aparecer */
+}
+
+@keyframes aparecerDesdeAbajo {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para la imagen guardada en la barra blanca */
+.imagen-guardada {
+    width: 100px; /* Ajusta según sea necesario */
+    height: 100px; /* Ajusta según sea necesario */
+    margin: 5px; /* Ajusta según sea necesario */
+}
+.acciones-principal {
+    border-color: rgb(11, 245, 233);
+}
+.comidas-principal {
+    border-color: rgb(250, 100, 250);
+}
+.descripciones-principal {
+    border-color: rgb(210, 245, 11);
+}
+.personas-principal {
+    border-color: rgb(11, 245, 62);
+}
+.lugares-principal {
+    border-color: rgb(245, 11, 11);
+}
+.objetos-principal {
+    border-color: rgb(46, 11, 245);
+}
+.respuestas-principal {
+    border-color: rgb(245, 124, 11);
+}

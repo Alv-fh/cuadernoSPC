@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    color: black; /* Color del texto */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  #title-container {
+    text-align: center;
+  }
+  
+  #main-title {
+    opacity: 0;
+  }
+  
+  .fade-in {
+    animation: fadeIn 4s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
