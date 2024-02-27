@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comidas.css">
+    <title>Comidas</title>
+<body>
+
+<button id="volverMenu" onclick="volverMenu()">Volver al Menú</button>
+
+<script>
+    function volverMenu() {
+        window.location.href = '../index2.html';
+    }
+</script>
+
+
+    <div id="imagenSeleccionadaContainer">
+        <!-- Aquí se mostrarán las imágenes seleccionadas -->
+      </div>
+<div id="border">
+    <div id="accionesContainer">
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ACELGAS.jpg');">
+        <img src="comidas/P_ACELGAS.jpg" width="10%" height="10%">
+    </a>
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ALBARICOQUE.jpg');">
+        <img src="comidas/P_ALBARICOQUE.jpg" width="10%" height="10%" alt="P_ALBARICOQUE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ALBÓNDIGAS.jpg');">
+        <img src="comidas/P_ALBÓNDIGAS.jpg" width="10%" height="10%" alt="P_ALBÓNDIGAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ARROZ-CON-TOMATE.jpg');">
+        <img src="comidas/P_ARROZ-CON-TOMATE.jpg" width="10%" height="10%" alt="P_ARROZ-CON-TOMATE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ARROZ-TRES-DELICIAS.jpg');">
+        <img src="comidas/P_ARROZ-TRES-DELICIAS.jpg" width="10%" height="10%" alt="P_ARROZ-TRES-DELICIAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_BIZCOCHO.jpg');">
+        <img src="comidas/P_BIZCOCHO.jpg" width="10%" height="10%" alt="P_BIZCOCHO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_BOQUERONES.jpg');">
+        <img src="comidas/P_BOQUERONES.jpg" width="10%" height="10%" alt="P_BOQUERONES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_BROCHETA-DE-FRUTAS.jpg');">
+        <img src="comidas/P_BROCHETA-DE-FRUTAS.jpg" width="10%" height="10%" alt="P_BROCHETA-DE-FRUTAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_BROCOLI.jpg');">
+        <img src="comidas/P_BROCOLI.jpg" width="10%" height="10%" alt="P_BROCOLI">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CACHOPO.jpg');">
+        <img src="comidas/P_CACHOPO.jpg" width="10%" height="10%" alt="P_CACHOPO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CALAMARES.jpg');">
+        <img src="comidas/P_CALAMARES.jpg" width="10%" height="10%" alt="P_CALAMARES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CANELONES.jpg');">
+        <img src="comidas/P_CANELONES.jpg" width="10%" height="10%" alt="P_CANELONES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CEREZAS.jpg');">
+        <img src="comidas/P_CEREZAS.jpg" width="10%" height="10%" alt="P_CEREZAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CHOCOLATE.jpg');">
+        <img src="comidas/P_CHOCOLATE.jpg" width="10%" height="10%" alt="P_CHOCOLATE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CHUCHERIAS.jpg');">
+        <img src="comidas/P_CHUCHERÍAS.jpg" width="10%" height="10%" alt="P_CHUCHERÍAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CHULETA.jpg');">
+        <img src="comidas/P_CHULETA.jpg" width="10%" height="10%" alt="P_CHULETA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_COLIFLOR.jpg');">
+        <img src="comidas/P_COLIFLOR.jpg" width="10%" height="10%" alt="P_COLIFLOR">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CROQUETAS.jpg');">
+        <img src="comidas/P_CROQUETAS.jpg" width="10%" height="10%" alt="P_CROQUETAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_CUAJADA.jpg');">
+        <img src="comidas/P_CUAJADA.jpg" width="10%" height="10%" alt="P_CUAJADA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_EMBUTIDO.jpg');">
+        <img src="comidas/P_EMBUTIDO.jpg" width="10%" height="10%" alt="P_EMBUTIDO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_EMPANADA.jpg');">
+        <img src="comidas/P_EMPANADA.jpg" width="10%" height="10%" alt="P_EMPANADA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_EMPANADILLAS.jpg');">
+        <img src="comidas/P_EMPANADILLAS.jpg" width="10%" height="10%" alt="P_EMPANADILLAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ENSALADA.jpg');">
+        <img src="comidas/P_ENSALADA.jpg" width="10%" height="10%" alt="P_ENSALADA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ENSALADILLA-RUSA.jpg');">
+        <img src="comidas/P_ENSALADILLA-RUSA.jpg" width="10%" height="10%" alt="P_ENSALADILLA-RUSA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ESPAGUETIS.jpg');">
+        <img src="comidas/P_ESPAGUETIS.jpg" width="10%" height="10%" alt="P_ESPAGUETIS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ESPARRAGOS.jpg');">
+        <img src="comidas/P_ESPARRAGOS.jpg" width="10%" height="10%" alt="P_ESPARRAGOS">
+    </a>
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ESTOFADO.jpg');">
+        <img src="comidas/P_ESTOFADO.jpg" width="10%" height="10%" alt="P_ESTOFADO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FABADA.jpg');">
+        <img src="comidas/P_FABADA.jpg" width="10%" height="10%" alt="P_FABADA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FIAMBRE-DE-PAVO.jpg');">
+        <img src="comidas/P_FIAMBRE-DE-PAVO.jpg" width="10%" height="10%" alt="P_FIAMBRE-DE-PAVO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FIDEUA.jpg');">
+        <img src="comidas/P_FIDEUÁ.jpg" width="10%" height="10%" alt="P_FIDEUÁ">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FILETE-DE-POLLO.jpg');">
+        <img src="comidas/P_FILETE-DE-POLLO.jpg" width="10%" height="10%" alt="P_FILETE-DE-POLLO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FILETE-RUSO.jpg');">
+        <img src="comidas/P_FILETE-RUSO.jpg" width="10%" height="10%" alt="P_FILETE-RUSO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FILETE.jpg');">
+        <img src="comidas/P_FILETE.jpg" width="10%" height="10%" alt="P_FILETE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FLAN.jpg');">
+        <img src="comidas/P_FLAN.jpg" width="10%" height="10%" alt="P_FLAN">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FRESA.jpg');">
+        <img src="comidas/P_FRESA.jpg" width="10%" height="10%" alt="P_FRESA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_FRUTA.jpg');">
+        <img src="comidas/P_FRUTA.jpg" width="10%" height="10%" alt="P_FRUTA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_GARBANZOS.jpg');">
+        <img src="comidas/P_GARBANZOS.jpg" width="10%" height="10%" alt="P_GARBANZOS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_GELATINA.jpg');">
+        <img src="comidas/P_GELATINA.jpg" width="10%" height="10%" alt="P_GELATINA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_GUISANTES.jpg');">
+        <img src="comidas/P_GUISANTES.jpg" width="10%" height="10%" alt="P_GUISANTES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_HAMBURGUESA-CON-PATATAS.jpg');">
+        <img src="comidas/P_HAMBURGUESA-CON-PATATAS.jpg" width="10%" height="10%" alt="P_HAMBURGUESA-CON-PATATAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_HAMBURGUESA.jpg');">
+        <img src="comidas/P_HAMBURGUESA.jpg" width="10%" height="10%" alt="P_HAMBURGUESA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_HELADO-TARRINA.jpg');">
+        <img src="comidas/P_HELADO-TARRINA.jpg" width="10%" height="10%" alt="P_HELADO-TARRINA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_HELADO.jpg');">
+        <img src="comidas/P_HELADO.jpg" width="10%" height="10%" alt="P_HELADO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_HUEVOS-COCIDOS.jpg');">
+        <img src="comidas/P_HUEVOS-COCIDOS.jpg" width="10%" height="10%" alt="P_HUEVOS-COCIDOS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_JAMON-YORK.jpg');">
+        <img src="comidas/P_JAMÓN-YORK.jpg" width="10%" height="10%" alt="P_JAMÓN-YORK">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_JAMON.jpg');">
+        <img src="comidas/P_JAMÓN.jpg" width="10%" height="10%" alt="P_JAMÓN">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_JUDIAS-VERDES.jpg');">
+        <img src="comidas/P_JUDIAS-VERDES.jpg" width="10%" height="10%" alt="P_JUDIAS-VERDES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_JUDIAS.jpg');">
+        <img src="comidas/P_JUDIAS.jpg" width="10%" height="10%" alt="P_JUDIAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_KIWIS.jpg');">
+        <img src="comidas/P_KIWIS.jpg" width="10%" height="10%" alt="P_KIWIS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_LASAÑA.jpg');">
+        <img src="comidas/P_LASAÑA.jpg" width="10%" height="10%" alt="P_LASAÑA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_LECHE.jpg');">
+        <img src="comidas/P_LECHE.jpg" width="10%" height="10%" alt="P_LECHE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_LENTEJAS.jpg');">
+        <img src="comidas/P_LENTEJAS.jpg" width="10%" height="10%" alt="P_LENTEJAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_LOMO.jpg');">
+        <img src="comidas/P_LOMO.jpg" width="10%" height="10%" alt="P_LOMO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MACARRONES.jpg');">
+        <img src="comidas/P_MACARRONES.jpg" width="10%" height="10%" alt="P_MACARRONES">
+    </a>
+
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MACEDONIA.jpg');">
+        <img src="comidas/P_MACEDONIA.jpg" width="10%" height="10%" alt="P_MACEDONIA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MANZANA-AMARILLA.jpg');">
+        <img src="comidas/P_MANZANA-AMARILLA.jpg" width="10%" height="10%" alt="P_MANZANA-AMARILLA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MANZANA-ROJA.jpg');">
+        <img src="comidas/P_MANZANA-ROJA.jpg" width="10%" height="10%" alt="P_MANZANA-ROJA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MANZANA-VERDE.jpg');">
+        <img src="comidas/P_MANZANA-VERDE.jpg" width="10%" height="10%" alt="P_MANZANA-VERDE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MELOCOTÓN-EN-ALMÍBAR.jpg');">
+        <img src="comidas/P_MELOCOTÓN-EN-ALMÍBAR.jpg" width="10%" height="10%" alt="P_MELOCOTÓN-EN-ALMÍBAR">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MELOCOTÓN.jpg');">
+        <img src="comidas/P_MELOCOTÓN.jpg" width="10%" height="10%" alt="P_MELOCOTÓN">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MELÓN.jpg');">
+        <img src="comidas/P_MELÓN.jpg" width="10%" height="10%" alt="P_MELÓN">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MENESTRA-DE-VERDUDAS.jpg');">
+        <img src="comidas/P_MENESTRA-DE-VERDURAS.jpg" width="10%" height="10%" alt="P_MENESTRA-DE-VERDUDAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MERLUZA.jpg');">
+        <img src="comidas/P_MERLUZA.jpg" width="10%" height="10%" alt="P_MERLUZA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_MUSLO-DE-POLLO.jpg');">
+        <img src="comidas/P_MUSLO-DE-POLLO.jpg" width="10%" height="10%" alt="P_MUSLO-DE-POLLO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_NARANJA.jpg');">
+        <img src="comidas/P_NARANJA.jpg" width="10%" height="10%" alt="P_NARANJA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_NATILLAS.jpg');">
+        <img src="comidas/P_NATILLAS.jpg" width="10%" height="10%" alt="P_NATILLAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PAELLA.jpg');">
+        <img src="comidas/P_PAELLA.jpg" width="10%" height="10%" alt="P_PAELLA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PALITOS-DE-PESCADO.jpg');">
+        <img src="comidas/P_PALITOS-DE-PESCADO.jpg" width="10%" height="10%" alt="P_PALITOS-DE-PESCADO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PASTELES.jpg');">
+        <img src="comidas/P_PASTELES.jpg" width="10%" height="10%" alt="P_PASTELES">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PATATAS-CON-CHORIZO.jpg');">
+        <img src="comidas/P_PATATAS-CON-CHORIZO.jpg" width="10%" height="10%" alt="P_PATATAS-CON-CHORIZO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PATATAS.jpg');">
+        <img src="comidas/P_PATATAS.jpg" width="10%" height="10%" alt="P_PATATAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PERA.jpg');">
+        <img src="comidas/P_PERA.jpg" width="10%" height="10%" alt="P_PERA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PESCADO.jpg');">
+        <img src="comidas/P_PESCADO.jpg" width="10%" height="10%" alt="P_PESCADO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PIÑA-EN-ALMÍBAR.jpg');">
+        <img src="comidas/P_PIÑA-EN-ALMÍBAR.jpg" width="10%" height="10%" alt="P_PINA-EN-ALMÍBAR">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PIÑA.jpg');">
+        <img src="comidas/P_PIÑA.jpg" width="10%" height="10%" alt="P_PIÑA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PIZZA.jpg');">
+        <img src="comidas/P_PIZZA.jpg" width="10%" height="10%" alt="P_PIZZA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PLÁTANO.jpg');">
+        <img src="comidas/P_PLÁTANO.jpg" width="10%" height="10%" alt="P_PLÁTANO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_POLLO.jpg');">
+        <img src="comidas/P_POLLO.jpg" width="10%" height="10%" alt="P_POLLO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_PURÉ.jpg');">
+        <img src="comidas/P_PURÉ.jpg" width="10%" height="10%" alt="P_PURÉ">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_QUESO.jpg');">
+        <img src="comidas/P_QUESO.jpg" width="10%" height="10%" alt="P_QUESO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SALCHICHAS.jpg');">
+        <img src="comidas/P_SALCHICHAS.jpg" width="10%" height="10%" alt="P_SALCHICHAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SALMÓN.jpg');">
+        <img src="comidas/P_SALMÓN.jpg" width="10%" height="10%" alt="P_SALMÓN">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SAN-JACOBO.jpg');">
+        <img src="comidas/P_SAN-JACOBO.jpg" width="10%" height="10%" alt="P_SAN-JACOBO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SANDIA.jpg');">
+        <img src="comidas/P_SANDIA.jpg" width="10%" height="10%" alt="P_SANDÍA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SANDWICH.jpg');">
+        <img src="comidas/P_SANDWICH.jpg" width="10%" height="10%" alt="P_SANDWICH">
+    </a>    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SETAS.jpg');">
+        <img src="comidas/P_SETAS.jpg" width="10%" height="10%" alt="P_SETAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SOLOMILLO.jpg');">
+        <img src="comidas/P_SOLOMILLO.jpg" width="10%" height="10%" alt="P_SOLOMILLO">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_SOPA.jpg');">
+        <img src="comidas/P_SOPA.jpg" width="10%" height="10%" alt="P_SOPA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TARTA-DE-CHOCOLATE.jpg');">
+        <img src="comidas/P_TARTA-DE-CHOCOLATE.jpg" width="10%" height="10%" alt="P_TARTA-DE-CHOCOLATE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TARTA-DE-CUMPLEAÑOS.jpg');">
+        <img src="comidas/P_TARTA-DE-CUMPLEAÑOS.jpg" width="10%" height="10%" alt="P_TARTA-DE-CUMPLEAÑOS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TARTA-DE-NATA.jpg');">
+        <img src="comidas/P_TARTA-DE-NATA.jpg" width="10%" height="10%" alt="P_TARTA-DE-NATA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TOMATE.jpg');">
+        <img src="comidas/P_TOMATE.jpg" width="10%" height="10%" alt="P_TOMATE">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TORTILLA-DE-PATATA.jpg');">
+        <img src="comidas/P_TORTILLA-DE-PATATA.jpg" width="10%" height="10%" alt="P_TORTILLA-DE-PATATA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_TORTILLA.jpg');">
+        <img src="comidas/P_TORTILLA.jpg" width="10%" height="10%" alt="P_TORTILLA">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_UVAS.jpg');">
+        <img src="comidas/P_UVAS.jpg" width="10%" height="10%" alt="P_UVAS">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_YOGURT.jpg');">
+        <img src="comidas/P_YOGURT.jpg" width="10%" height="10%" alt="P_YOGURT">
+    </a>
+    
+    <a href="#" onclick="zcomidas_mostrarPictograma('comidas/P_ZUMO.jpg');">
+        <img src="comidas/P_ZUMO.jpg" width="10%" height="10%" alt="P_ZUMO">
+    </a>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>     
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+  <script src="comidas.js"></script>
+</body>
+</html>

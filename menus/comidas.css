@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-image: url('images/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#imagenSeleccionadaContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 150px; /* Ajusta este valor según sea necesario para limitar la altura */
+    
+    background-color: #ffffff; /* Color blanco de fondo */
+    padding: 2%;
+    border-top-left-radius: 15px; /* Bordes redondos en la esquina superior izquierda */
+    border-top-right-radius: 15px; /* Bordes redondos en la esquina superior derecha */
+    border: 3px solid #cccccc; /* Grosor y color del borde */
+    box-sizing: border-box; /* Incluye el grosor del borde en el tamaño total del elemento */
+    text-align: center; /* Centrar el texto */
+    
+}
+
+#imagenSeleccionadaContainer h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0; /* Eliminamos el espacio superior del título */
+    
+}
+
+#imagenSeleccionadaContainer img {
+    border-style: solid;
+    border-color: rgb(250, 100, 250);
+    height: 7%;
+    width: 7%;
+    float: left; 
+}
+#border img {
+    border-style: solid;
+    border-color: rgb(250, 100, 250);
+}
