@@ -43,3 +43,44 @@ body {
     border-color: rgb(46, 11, 245);
 }
 
+#volverMenuContainer {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 10px; /* Ajusta la distancia desde la izquierda según sea necesario */
+    z-index: 1000;
+    background-color: rgb(46, 11, 245); /* Fondo blanco */
+}
+
+/* Estilo original con degradado */
+#volverMenu {
+    border-style: solid;
+    border-color: black;
+    background: linear-gradient(-45deg, #52eea0, #dbff38, #00bafdf6, #0041f5);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: x-large;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: fluido 10s ease-in-out infinite, backgroundChange 0.5s ease-out;
+}
+
+
+
+@keyframes fluido {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#volverMenu:hover {
+    color: blueviolet;
+    border-color: rgb(46, 11, 245);
+    animation: none; /* Detiene la animación al pasar por encima */
+}
