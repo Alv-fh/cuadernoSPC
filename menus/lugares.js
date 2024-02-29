@@ -1,31 +1,61 @@
-// zlugares.js
+// Variables globales específicas para lugares
+var todas_imagenesSeleccionadas = {};
 
-// Variables globales específicas para zlugares
-var zlugares_pictogramasSeleccionados = [];
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('volverMenu').addEventListener('click', redirigirAMenu);
+    document.getElementById('volverMenu').addEventListener('click', function () {
+        agregarRutaImagen('lugares_imagenSeleccionada');
+        redirigirAMenu();
+    });
+
     cargarPictogramas();
     cargarImagenSeleccionada();
 });
+
+function agregarRutaImagen(clave) {
+    var rutaImagen = 'menus/' + sessionStorage.getItem(clave);
+    var categoria = obtenerCategoriaDesdeClave(clave);
+
+    // Crear un array para la categoría si aún no existe
+    if (!todas_imagenesSeleccionadas[categoria]) {
+        todas_imagenesSeleccionadas[categoria] = [];
+    }
+
+    // Verificar si la ruta ya está en el array de la categoría antes de agregarla
+    if (!todas_imagenesSeleccionadas[categoria].includes(rutaImagen)) {
+        todas_imagenesSeleccionadas[categoria].push(rutaImagen);
+    }
+}
+
+function obtenerCategoriaDesdeClave(clave) {
+    // Implementa la lógica para obtener la categoría desde la clave (por ejemplo, usando regex)
+    // En este ejemplo, se asume que la categoría es el primer segmento antes de '_imagenSeleccionada'
+    var match = clave.match(/^(.+?)_imagenSeleccionada/);
+    return match ? match[1] : '';
+}
+
 function cargarPictogramas() {
+    var imagenesAnteriores = sessionStorage.getItem('todas_imagenesSeleccionadas');
+
+    if (imagenesAnteriores) {
+        todas_imagenesSeleccionadas = JSON.parse(imagenesAnteriores);
+    }
+
     for (var i = 0; i < sessionStorage.length; i++) {
         var clave = sessionStorage.key(i);
-        if (clave.startsWith('zlugares_imagenSeleccionada')) {
-            var rutaImagen = 'menus/' + sessionStorage.getItem(clave);
-            agregarPictogramaSeleccionado(rutaImagen);
+        if (clave.endsWith('_imagenSeleccionada')) {
+            agregarRutaImagen(clave);
         }
     }
 }
-function agregarPictogramaSeleccionado(src) {
-    zlugares_pictogramasSeleccionados.push(src);
-}
+
 function cargarImagenSeleccionada() {
-    var zlugares_imagenSeleccionada = sessionStorage.getItem('zlugares_imagenSeleccionada');
-    if (zlugares_imagenSeleccionada) {
-        zlugares_mostrarPictograma(zlugares_imagenSeleccionada);
+    var lugares_imagenSeleccionada = sessionStorage.getItem('lugares_imagenSeleccionada');
+    if (lugares_imagenSeleccionada) {
+        lugares_mostrarPictograma(lugares_imagenSeleccionada);
     }
 }
-function zlugares_mostrarPictograma(src) {
+
+function lugares_mostrarPictograma(src) {
     var barraBlanca = document.getElementById('imagenSeleccionadaContainer');
     if (barraBlanca) {
         barraBlanca.innerHTML = '';
@@ -35,9 +65,11 @@ function zlugares_mostrarPictograma(src) {
         pictogramaSeleccionado.classList.add('pictograma-seleccionado');
 
         barraBlanca.appendChild(pictogramaSeleccionado);
-        sessionStorage.setItem('zlugares_imagenSeleccionada', src);
+        sessionStorage.setItem('lugares_imagenSeleccionada', src);
     }
 }
+
 function redirigirAMenu() {
-    sessionStorage.setItem('zlugares_imagenesSeleccionadas', JSON.stringify(zlugares_pictogramasSeleccionados));
+    // Almacenar el objeto actualizado en sessionStorage
+    sessionStorage.setItem('todas_imagenesSeleccionadas', JSON.stringify(todas_imagenesSeleccionadas));
 }
