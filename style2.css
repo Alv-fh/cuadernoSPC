@@ -43,7 +43,7 @@ body {
     text-align: center;
     margin: 5% 30%; 
     border-radius: 15px;
-    overflow: hidden;
+    overflow: auto;
 }
 #comidas {
     background-color: rgb(250, 100, 250);
@@ -86,7 +86,7 @@ body {
     text-align: center; /* Centrar el texto */
 }   
 #barraBlancaContainer {
-    height: 34%;  /* Ajusta el valor según sea necesario */
+    height: 30%;  /* Ajusta el valor según sea necesario */
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -115,7 +115,7 @@ body {
 #imagenSeleccionadaContainer img {
     border-style: solid;
     border-width: 5px; /* Ajusta el grosor del borde según sea necesario */
-    margin: 4%; /* Ajusta el espacio entre las imágenes según sea necesario */
+    margin: 3%; /* Ajusta el espacio entre las imágenes según sea necesario */
     height: 7%;
     width: 7%;
     float: left;
@@ -183,4 +183,63 @@ body {
 }
 .respuestas-principal {
     border-color: rgb(245, 124, 11);
+}
+
+.limpiarSessionStorage {
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    right: 10px; /* Ajusta la distancia desde la derecha según sea necesario */
+    z-index: 1000;
+    border-style: solid;
+    border-color: white;
+    background: linear-gradient(-45deg, #52eea0, #dbff38, #00bafdf6, #0041f5);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: x-large;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: fluido 10s ease-in-out infinite, backgroundChange 0.5s ease-out;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: wheat;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+.limpiarSessionStorage:hover{
+    color: blueviolet;
+    border-color: black;
+    animation: none; /* Detiene la animación al pasar por encima */
+}
+
+.ok{
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 10px; /* Ajusta la distancia desde la izquierda según sea necesario */
+    z-index: 1000;
+    border-style: solid;
+    
+    border-color: white;
+    background: linear-gradient(-45deg, #52eea0, #dbff38, #00bafdf6, #0041f5);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: x-large;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: fluido 10s ease-in-out infinite, backgroundChange 0.5s ease-out;
+}
+.ok:hover{
+    color: blueviolet;
+    border-color: black;
+    animation: none; /* Detiene la animación al pasar por encima */
 }
