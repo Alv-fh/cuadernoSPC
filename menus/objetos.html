@@ -1,246 +1,75 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetos</title>
-    <link rel="stylesheet" href="objetos.css">
-</head>
-<body>
-    <button id="volverMenu" onclick="volverMenu()">Volver al Menú</button>
+// Variables globales específicas para objetos
+var todas_imagenesSeleccionadas = {};
 
-    <script>
-        function volverMenu() {
-            window.location.href = '../index2.html';
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('volverMenu').addEventListener('click', function () {
+        agregarRutaImagen('objetos_imagenSeleccionada');
+        redirigirAMenu();
+    });
+
+    cargarPictogramas();
+    cargarImagenSeleccionada();
+});
+
+function agregarRutaImagen(clave) {
+    var rutaImagen = 'menus/' + sessionStorage.getItem(clave);
+    var categoria = obtenerCategoriaDesdeClave(clave);
+
+    // Crear un array para la categoría si aún no existe
+    if (!todas_imagenesSeleccionadas[categoria]) {
+        todas_imagenesSeleccionadas[categoria] = [];
+    }
+
+    // Verificar si la ruta ya está en el array de la categoría antes de agregarla
+    if (!todas_imagenesSeleccionadas[categoria].includes(rutaImagen)) {
+        todas_imagenesSeleccionadas[categoria].push(rutaImagen);
+    }
+}
+
+function obtenerCategoriaDesdeClave(clave) {
+    // Implementa la lógica para obtener la categoría desde la clave (por ejemplo, usando regex)
+    // En este ejemplo, se asume que la categoría es el primer segmento antes de '_imagenSeleccionada'
+    var match = clave.match(/^(.+?)_imagenSeleccionada/);
+    return match ? match[1] : '';
+}
+
+function cargarPictogramas() {
+    var imagenesAnteriores = sessionStorage.getItem('todas_imagenesSeleccionadas');
+
+    if (imagenesAnteriores) {
+        todas_imagenesSeleccionadas = JSON.parse(imagenesAnteriores);
+    }
+
+    for (var i = 0; i < sessionStorage.length; i++) {
+        var clave = sessionStorage.key(i);
+        if (clave.endsWith('_imagenSeleccionada')) {
+            agregarRutaImagen(clave);
         }
-    </script>
-    
-    
-        <div id="imagenSeleccionadaContainer">
-            <!-- Aquí se mostrarán las imágenes seleccionadas -->
-          </div>
-    <div id="border">
-        <div id="accionesContainer">
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/aire_acondicionado.png');">
-                <img src="objetos/aire_acondicionado.png" width="10%" height="10%">
-            </a>
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/antena.png');">
-                <img src="objetos/antena.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/banco.png');">
-                <img src="objetos/banco.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/báscula.png');">
-                <img src="objetos/báscula.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/billetera.png');">
-                <img src="objetos/billetera.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/bombilla.png');">
-                <img src="objetos/bombilla.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cacerola.png');">
-                <img src="objetos/cacerola.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/caja_fuerte.png');">
-                <img src="objetos/caja_fuerte.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/caldera_de_gas.png');">
-                <img src="objetos/caldera_de_gas.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cama.png');">
-                <img src="objetos/cama.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cepillo.png');">
-                <img src="objetos/cepillo.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cojín.png');">
-                <img src="objetos/cojín.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cubo_de_basura.png');">
-                <img src="objetos/cubo_de_basura.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/cuchilla.png');">
-                <img src="objetos/cuchilla.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/ducha.png');">
-                <img src="objetos/ducha.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/escalera_mecanica.png');">
-                <img src="objetos/escalera_mecanica.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/espejo.png');">
-                <img src="objetos/espejo.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/espuma_de_afeitar.png');">
-                <img src="objetos/espuma_de_afeitar.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/estufa.png');">
-                <img src="objetos/estufa.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/extintor.png');">
-                <img src="objetos/extintor.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/farola.png');">
-                <img src="objetos/farola.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/fregona.png');">
-                <img src="objetos/fregona.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/fuente_de_agua.png');">
-                <img src="objetos/fuente_de_agua.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/horno.png');">
-                <img src="objetos/horno.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/lavadora.png');">
-                <img src="objetos/lavadora.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/lavavajillas.png');">
-                <img src="objetos/lavavajillas.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/mantel.png');">
-                <img src="objetos/mantel.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/marco.png');">
-                <img src="objetos/marco.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/mesa_de_estudio.png');">
-                <img src="objetos/mesa_de_estudio.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/mesilla.png');">
-                <img src="objetos/mesilla.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/nevera.png');">
-                <img src="objetos/nevera.png" width="10%" height="10%">
-            </a>
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/pano_de_cocina.png');">
-                <img src="objetos/pano_de_cocina.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/papelera.png');">
-                <img src="objetos/papelera.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/paraguero.png');">
-                <img src="objetos/paraguero.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/perfume.png');">
-                <img src="objetos/perfume.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/portero_automatico.png');">
-                <img src="objetos/portero_automatico.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/pulsera.png');">
-                <img src="objetos/pulsera.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/recogedor.png');">
-                <img src="objetos/recogedor.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/reloj_despertador.png');">
-                <img src="objetos/reloj_despertador.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/sábanas.png');">
-                <img src="objetos/sábanas.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/sacacorchos.png');">
-                <img src="objetos/sacacorchos.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/servilleta.png');">
-                <img src="objetos/servilleta.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/sofá.png');">
-                <img src="objetos/sofá.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/sombrero.png');">
-                <img src="objetos/sombrero.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/taburete.png');">
-                <img src="objetos/taburete.png" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/vater.png');">
-                <img src="objetos/vater.png" width="10%" height="10%">
-            </a>
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/t_23.jpg');">
-                <img src="objetos/t_23.jpg" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/t_48.jpg');">
-                <img src="objetos/t_48.jpg" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/t_54.jpg');">
-                <img src="objetos/t_54.jpg" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/t_62.jpg');">
-                <img src="objetos/t_62.jpg" width="10%" height="10%">
-            </a>
-        
-            <a href="#" onclick="zobjetos_mostrarPictograma('objetos/t_65.jpg');">
-                <img src="objetos/t_65.jpg" width="10%" height="10%">
-            </a>
+    }
+}
 
-        </div> 
-    </div>
-</div>
+function cargarImagenSeleccionada() {
+    var objetos_imagenSeleccionada = sessionStorage.getItem('objetos_imagenSeleccionada');
+    if (objetos_imagenSeleccionada) {
+        objetos_mostrarPictograma(objetos_imagenSeleccionada);
+    }
+}
 
+function objetos_mostrarPictograma(src) {
+    var barraBlanca = document.getElementById('imagenSeleccionadaContainer');
+    if (barraBlanca) {
+        barraBlanca.innerHTML = '';
+        var pictogramaSeleccionado = document.createElement('img');
+        pictogramaSeleccionado.src = src;
+        pictogramaSeleccionado.alt = 'Pictograma Seleccionado';
+        pictogramaSeleccionado.classList.add('pictograma-seleccionado');
 
+        barraBlanca.appendChild(pictogramaSeleccionado);
+        sessionStorage.setItem('objetos_imagenSeleccionada', src);
+    }
+}
 
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>     
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>     
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-
-    <script src="objetos.js"></script>
-</body>
-</html>
+function redirigirAMenu() {
+    // Almacenar el objeto actualizado en sessionStorage
+    sessionStorage.setItem('todas_imagenesSeleccionadas', JSON.stringify(todas_imagenesSeleccionadas));
+}
